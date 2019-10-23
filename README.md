@@ -29,7 +29,7 @@ $ brew install nsq
 $ go get github.com/bitly/go-nsq // nsq driver for go
 ```
 
-[MongoDB](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/)のインストール
+[MongoDB](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/)のインストール
 ```
 $ brew tap mongodb/brew
 $ brew install mongodb-community@4.2
