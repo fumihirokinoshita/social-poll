@@ -33,5 +33,14 @@ $ go get github.com/bitly/go-nsq // nsq driver for go
 ```
 $ brew tap mongodb/brew
 $ brew install mongodb-community@4.2
+$ brew services start mongodb-community@4.2
 $ go get gopkg.in/mgo.v2 // mongodb driver for go
+$ mkdir db
+```
+
+NSQとMongoDBの起動
+```
+$ nslookupd
+$ nsqd --lookupd-tcp-address=localhost=4160
+$ mongod --dbpath ./db
 ```
