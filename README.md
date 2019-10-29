@@ -16,6 +16,12 @@ $ echo 'export PATH=$PATH:$(go env GOPATH)/bin' >> ~/.bash_profile
 $ source ~/.bash_profile
 ```
 
+ライブラリのインストール
+```
+$ go get github.com/joeshaw/envdecode
+$ go get github.com/garyburd/go-oauth/oauth
+```
+
 clone
 ```
 $ mkdir $HOME/go/src
