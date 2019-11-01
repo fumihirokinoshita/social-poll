@@ -33,7 +33,7 @@ func dial(netw, addr string) (net.Conn, error) {
 
 var reader io.ReadCloser
 
-func cliseConn() {
+func closeConn() {
 	if conn != nil {
 		conn.Close()
 	}

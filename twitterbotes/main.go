@@ -2,6 +2,10 @@ package main
 
 import (
 	"log"
+	"os"
+	"os/signal"
+	"sync"
+	"syscall"
 
 	"github.com/bitly/go-nsq"
 	"gopkg.in/mgo.v2"
@@ -51,4 +55,19 @@ func publishVotes(votes <-chan string) <-chan struct{} {
 	return stopchan
 }
 
-func main() {}
+func main() {
+	var stoplock sync.Mutex
+	stop := false
+	stopChan := make(chan struct{}, 1)
+	signalChan := make(chan os.Signal, 1)
+	go func() {
+		<-signalChan
+		stoplock.Lock()
+		stop = true
+		stoplock.Unlock()
+		log.Println("停止します...")
+		stopChan <- struct{}{}
+		closeConn()
+	}()
+	signal.Notify(signalChan, syscall.SIGINT, syscall.SIGTERM)
+}
