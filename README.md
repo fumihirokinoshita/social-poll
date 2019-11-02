@@ -20,6 +20,7 @@ $ source ~/.bash_profile
 ```
 $ go get github.com/joeshaw/envdecode
 $ go get github.com/garyburd/go-oauth/oauth
+$ go get github.com/stretchr/graceful
 ```
 
 clone
