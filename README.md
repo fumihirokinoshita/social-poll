@@ -47,6 +47,6 @@ $ mkdir db
 NSQとMongoDBの起動
 ```
 $ nsqlookupd
-$ nsqd --lookupd-tcp-address=localhost=4160
+$ nsqd --lookupd-tcp-address=localhost:4160
 $ mongod --dbpath ./db
 ```
