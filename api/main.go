@@ -13,3 +13,7 @@ func withAPIKey(fn http.HandlerFunc) http.HandlerFunc {
 		fn(w, r)
 	}
 }
+
+func isValidAPIKey(key string) bool {
+	return key == "abc123"
+}
