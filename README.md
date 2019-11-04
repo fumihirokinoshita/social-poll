@@ -50,4 +50,16 @@ NSQとMongoDBの起動
 $ nsqlookupd
 $ nsqd --lookupd-tcp-address=localhost:4160
 $ mongod --dbpath ./db
+$ cd $HOME/go/src/social-poll/twittervotes
+$ go build -o twittervotes
+$ ./twittervotes
+$ cd $HOME/go/src/social-poll/counter
+$ go build -o counter
+$ ./counter
+$ cd $HOME/go/src/social-poll/api
+$ go build -o api
+$ ./api
+$ cd $HOME/go/src/social-poll/web
+$ go build -o web
+$ ./web
 ```
