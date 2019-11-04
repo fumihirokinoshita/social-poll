@@ -71,7 +71,7 @@ func main() {
 		return
 	}
 
-	log.Println("NSQ情での投票を待機します...")
+	log.Println("NSQ上での投票を待機します...")
 	var updater *time.Timer
 	updater = time.AfterFunc(updateDuration, func() {
 		countsLock.Lock()
@@ -101,7 +101,7 @@ func main() {
 	})
 
 	termChan := make(chan os.Signal, 1)
-	signal.Notify(termChan, syscall.SIGTERM, syscall.SIGHUP)
+	signal.Notify(termChan, syscall.SIGINT, syscall.SIGTERM, syscall.SIGHUP)
 	for {
 		select {
 		case <-termChan:
