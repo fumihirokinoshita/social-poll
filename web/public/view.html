@@ -21,7 +21,7 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
         <script>
-            google.load('visualization', '1.0', {'package':['corechart']});
+            google.load('visualization', '1.0', {'packages':['corechart']});
             google.setOnLoadCallback(function(){
                 $(function(){
                     var chart;
@@ -41,10 +41,10 @@
                             }
                             if (poll.results) {
                                 var data = new google.visualization.DataTable();
-                                data.AddColumn("string","Option");
-                                data.AddColumn("number","Votes");
+                                data.addColumn("string","Option");
+                                data.addColumn("number","Votes");
                                 for (var o in poll.results) {
-                                    data.AddRow([o, poll.results[o]])
+                                    data.addRow([o, poll.results[o]])
                                 }
                                 if (!chart) {
                                     chart = new google.visualization.PieChart(document.getElementById('chart'));

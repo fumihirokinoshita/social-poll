@@ -23,13 +23,16 @@
                     .done(function(polls) {
                         $("#polls").empty();
                         for (var p in polls) {
-                            $("<li>").append(
-                                $("<a>")
-                                .attr("href", "view.html?poll=polls/" + poll.id)
-                                .text(poll.title)
+                            var poll = polls[p];
+                            $("#polls").append(
+                                $("<li>").append(
+                                    $("<a>")
+                                    .attr("href", "view.html?poll=polls/" + poll.id)
+                                    .text(poll.title)
+                                )
                             )
                         }
-                    })
+                    });
                     window.setTimeout(update, 10000);
                 }
                 update();
