@@ -117,7 +117,7 @@ func readFromTwitter(votes chan<- string) {
 		log.Println("検索のリクエストに失敗しました：", err)
 		return
 	}
-	reader = resp.Body
+	reader := resp.Body
 	decoder := json.NewDecoder(reader)
 	for {
 		var tweet tweet
