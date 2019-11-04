@@ -1,6 +1,7 @@
 api
 counter
 twittervotes
+web
 db/
 setup.sh
 nsqd.dat
