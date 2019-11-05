@@ -45,7 +45,8 @@ $ go get gopkg.in/mgo.v2 // mongodb driver for go
 $ mkdir db
 ```
 
-NSQとMongoDBの起動
+## 動作確認
+
 ```
 $ nsqlookupd
 $ nsqd --lookupd-tcp-address=localhost:4160
